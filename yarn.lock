@@ -854,9 +854,9 @@
     "@types/prop-types" "*"
     "@types/react" "*"
 
-"@types/react-navigation@2.13.7":
-  version "2.13.7"
-  resolved "http://registry.npm.taobao.org/@types/react-navigation/download/@types/react-navigation-2.13.7.tgz#a0b8d7823001c4ee6d295d1738e570f928c00f98"
+"@types/react-navigation@3.0.1":
+  version "3.0.1"
+  resolved "http://registry.npm.taobao.org/@types/react-navigation/download/@types/react-navigation-3.0.1.tgz#374db42a441f4fc50cc0c86a399e41ce4680bfd3"
   dependencies:
     "@types/react" "*"
     "@types/react-native" "*"
@@ -5780,6 +5780,14 @@ react-is@^16.3.2, react-is@^16.5.2, react-is@^16.6.1:
 react-lifecycles-compat@^3.0.4:
   version "3.0.4"
   resolved "http://registry.npm.taobao.org/react-lifecycles-compat/download/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
+
+react-native-gesture-handler@1.0.12:
+  version "1.0.12"
+  resolved "http://registry.npm.taobao.org/react-native-gesture-handler/download/react-native-gesture-handler-1.0.12.tgz#99a22f90212df299245357dbd3a9a01c788f310b"
+  dependencies:
+    hoist-non-react-statics "^2.3.1"
+    invariant "^2.2.2"
+    prop-types "^15.5.10"
 
 react-native-gesture-handler@^1.0.0:
   version "1.0.10"

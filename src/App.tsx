@@ -1,24 +1,8 @@
-// import { observer } from 'mobx-react/native';
-import React, { Component } from "react";
-import { Text, YellowBox, View } from "react-native";
+import React from "react";
+import Container from "./containers";
 
-YellowBox.ignoreWarnings([
-  "Module RCTImageLoader",
-  "Require cycle",
-  "Module RCTGetui",
-  "relay:check"
-]);
-
-export default class App extends Component {
-  constructor(props: any) {
-    super(props);
-  }
-
+export default class App extends React.PureComponent {
   render() {
-    return (
-      <View>
-        <Text>tttt</Text>
-      </View>
-    );
+    return <Container />;
   }
 }
