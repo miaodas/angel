@@ -5899,7 +5899,7 @@ react-navigation-tabs@1.0.1:
     react-lifecycles-compat "^3.0.4"
     react-native-tab-view "^1.0.0"
 
-react-navigation@^3.0.7:
+react-navigation@3.0.7:
   version "3.0.7"
   resolved "http://registry.npm.taobao.org/react-navigation/download/react-navigation-3.0.7.tgz#d0bd6138822eebaa500db6c1d2cba3c1d285ff44"
   dependencies:

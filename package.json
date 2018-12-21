@@ -4,7 +4,18 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest"
+    "test": "jest",
+    "lint": "yarn typecheck && yarn tslint",
+    "tslint": "tslint --project tsconfig.json --config tslint.json",
+    "typecheck": "tsc --project tsconfig.json --noEmit --skipLibCheck",
+    "ios": "react-native run-ios",
+    "ios-device": "react-native run-ios --device",
+    "ios-iphonex": "react-native run-ios --simulator=\"iPhone X\"",
+    "ios-iphone5s": "react-native run-ios --simulator=\"iPhone 5s\"",
+    "ios-run-release": "react-native run-ios --configuration Release",
+    "ios-codepush": "appcenter codepush release-react -a LoMoCoinTeam/CTMPay-iOS -d Staging",
+    "ios-screencap": "xcrun simctl io booted recordVideo appvideo.mov",
+    "android": "react-native run-android"
   },
   "dependencies": {
     "react": "16.6.1",
