@@ -1,3 +1,27 @@
 {
-  "presets": ["module:metro-react-native-babel-preset"]
+  "presets": [
+    "module:metro-react-native-babel-preset",
+    "module:react-native-dotenv",
+  ],
+  "sourceMaps": "inline",
+  "plugins": [
+    [
+      "@babel/plugin-proposal-decorators",
+      {
+        "legacy": true
+      }
+    ],
+    [
+      "module-resolver", {
+        "extensions": [
+          ".js",
+          ".ts",
+          ".tsx"
+        ],
+        "root": [
+          "./src"
+        ]
+      }
+    ]
+  ]
 }
