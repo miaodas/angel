@@ -20,16 +20,18 @@
   "dependencies": {
     "axios": "0.18.0",
     "core-decorators": "0.20.0",
+    "lodash": "^4.17.11",
     "mobx": "4.5.1",
+    "mobx-logger": "^0.7.1",
     "mobx-react": "5.4.3",
     "mobx-state-tree": "3.8.1",
     "moment": "^2.23.0",
-    "mobx-logger": "^0.7.1",
     "prop-types": "15.6.2",
     "react": "16.6.1",
     "react-native": "0.57.7",
     "react-native-dotenv": "0.2.0",
     "react-native-gesture-handler": "1.0.12",
+    "react-native-video": "^4.3.1",
     "react-navigation": "3.0.7"
   },
   "devDependencies": {

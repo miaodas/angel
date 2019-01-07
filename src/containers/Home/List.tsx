@@ -28,7 +28,7 @@ export default class List extends Component<IProps> {
 
   fetchVideos = async () => {
     const { video, navigation } = this.props;
-    const c = navigation.getParam('CHID', 1);
+    const c = navigation.getParam('c', 1);
     try {
       const respon = await video.getVideos({ c });
       console.log(respon);
@@ -54,13 +54,13 @@ export default class List extends Component<IProps> {
       <View style={styles.imageView}>
         <ImageBackground
           style={styles.image}
-          // source={{
-          //   uri:
-          //     'http://5b0988e595225.cdn.sohucs.com/images/20170813/f13f0109e3634bdeb889a0ba0be375d0.png',
-          // }}
           source={{
-            uri: (item && item.preview_url) || '',
+            uri:
+              'http://5b0988e595225.cdn.sohucs.com/images/20170813/f13f0109e3634bdeb889a0ba0be375d0.png',
           }}
+          // source={{
+          //   uri: (item && item.preview_url) || '',
+          // }}
           resizeMode="cover"
         >
           <View style={styles.duration}>
@@ -93,6 +93,7 @@ export default class List extends Component<IProps> {
 
   render() {
     const { video } = this.props;
+    console.log(this.props.navigation);
     return (
       <SafeAreaView style={styles.contain}>
         <FlatList

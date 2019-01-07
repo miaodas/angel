@@ -36,7 +36,7 @@ export default class Index extends Component<IProps> {
   openCat = (item: any) => {
     const { navigation } = this.props;
     navigation.navigate('List', {
-      cat: item.CHID,
+      c: item.CHID,
       name: item.name,
     });
   };

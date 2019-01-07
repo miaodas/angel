@@ -4335,6 +4335,10 @@ jws@^3.0.0, jws@^3.1.4:
     jwa "^1.1.5"
     safe-buffer "^5.0.1"
 
+keymirror@^0.1.1:
+  version "0.1.1"
+  resolved "http://registry.npm.taobao.org/keymirror/download/keymirror-0.1.1.tgz#918889ea13f8d0a42e7c557250eee713adc95c35"
+
 kind-of@^1.1.0:
   version "1.1.0"
   resolved "http://registry.npm.taobao.org/kind-of/download/kind-of-1.1.0.tgz#140a3d2d41a36d2efcfa9377b62c24f8495a5c44"
@@ -4609,7 +4613,7 @@ lodash@^3.3.1:
   version "3.10.1"
   resolved "http://registry.npm.taobao.org/lodash/download/lodash-3.10.1.tgz#5bf45e8e49ba4189e17d482789dfd15bd140b7b6"
 
-lodash@^4.13.1, lodash@^4.17.10, lodash@^4.17.4, lodash@^4.17.5, lodash@^4.2.1, lodash@^4.3.0, lodash@^4.5.1, lodash@^4.6.1:
+lodash@^4.13.1, lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.4, lodash@^4.17.5, lodash@^4.2.1, lodash@^4.3.0, lodash@^4.5.1, lodash@^4.6.1:
   version "4.17.11"
   resolved "http://registry.npm.taobao.org/lodash/download/lodash-4.17.11.tgz#b39ea6229ef607ecd89e2c8df12536891cac9b8d"
 
@@ -6008,6 +6012,14 @@ react-native-version@2.6.6:
     resolve-from "^4.0.0"
     semver "^5.5.0"
 
+react-native-video@^4.3.1:
+  version "4.3.1"
+  resolved "http://registry.npm.taobao.org/react-native-video/download/react-native-video-4.3.1.tgz#dd5cd7feeba1068dffb36ca0406214fe6ffc01aa"
+  dependencies:
+    keymirror "^0.1.1"
+    prop-types "^15.5.10"
+    shaka-player "^2.4.4"
+
 react-native@0.57.7:
   version "0.57.7"
   resolved "http://registry.npm.taobao.org/react-native/download/react-native-0.57.7.tgz#5b3af1c43366c41d8d8d2540fea8ce590060bca1"
@@ -6672,6 +6684,10 @@ setimmediate@^1.0.5:
 setprototypeof@1.1.0:
   version "1.1.0"
   resolved "http://registry.npm.taobao.org/setprototypeof/download/setprototypeof-1.1.0.tgz#d0bd85536887b6fe7c0d818cb962d9d91c54e656"
+
+shaka-player@^2.4.4:
+  version "2.4.5"
+  resolved "http://registry.npm.taobao.org/shaka-player/download/shaka-player-2.4.5.tgz#9d74d20ab98597b5b2b423440df9eb28dc182b36"
 
 shebang-command@^1.2.0:
   version "1.2.0"
