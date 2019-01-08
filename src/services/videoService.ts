@@ -20,11 +20,6 @@ resources.interceptors.request.use(
 resources.interceptors.response.use(
   response => response,
   error => {
-    // if (
-    //   (error.response && error.response.status === 401) ||
-    //   (error.response && error.response.data.code === 'Unauthorized')
-    // ) {
-    // }
     if (error.response) {
       // eslint-disable-next-line no-param-reassign
       error.message =

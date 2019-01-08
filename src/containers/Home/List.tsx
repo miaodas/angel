@@ -35,7 +35,7 @@ export default class List extends Component<IProps> {
     const { video, navigation } = this.props;
     const c = navigation.getParam('c', 1);
     try {
-      const respon = await video.getVideos({ c });
+      const respon = await video.getVideos({ c, page: 0 });
       console.log(respon);
       this.setOnLoad();
     } catch (error) {
@@ -105,6 +105,18 @@ export default class List extends Component<IProps> {
     </TouchableWithFeedback>
   );
 
+  endReached = async () => {
+    const { video, navigation } = this.props;
+    const c = navigation.getParam('c', 1);
+    try {
+      const respon = await video.getVideos({ c });
+      console.log('ssss');
+      console.log(respon);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   render() {
     const { video } = this.props;
     console.log(this.props.navigation);
@@ -117,7 +129,7 @@ export default class List extends Component<IProps> {
           ListHeaderComponent={<View style={styles.listHeader} />}
           // refreshControl={refreshControl}
           // ListFooterComponent={() => this.renderFooter()}
-          // onEndReached={this.endReached}
+          onEndReached={this.endReached}
           data={video.videos}
           keyExtractor={this.genarateKey}
           renderItem={this.renderItem}
