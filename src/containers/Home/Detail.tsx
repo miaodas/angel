@@ -12,7 +12,6 @@ import { IVideoStore } from '../../stores/Video';
 import Video from 'react-native-video';
 import TouchableWithFeedback from '../../components/common/TouchableWithFeedback';
 import styles from '../../styles/home/detail';
-// import html from ''
 
 interface IProps extends NavigationInjectedProps {
   video: IVideoStore;
@@ -90,7 +89,6 @@ export default class Detail extends Component<IProps> {
             // 'http://qthttp.apple.com.edgesuite.net/1010qwoeiuryfg/sl.m3u8',
             // 'https://ip110123427.cdn.qooqlevideo.com/key=3ssTGFu3paU15dAsMnLVAA,s=,end=1546597229,limit=2/data=1546597229/state=dz4c/referer=force,.avgle.com/reftag=56109644/media=hlsA/ssd6/177/3/135820593.mp4/seg-2-v1-a1.ts'
             // (item && item.embedded_url) ||
-            // 'https://static-clst.avgle.com/videos/tmb8/259017/preview.mp4',
           }} // Can be a URL or a local file.
           ref={ref => {
             this.player = ref;

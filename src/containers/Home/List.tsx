@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { View, FlatList, Text, ImageBackground } from 'react-native';
 import { SafeAreaView, NavigationInjectedProps } from 'react-navigation';
 import { inject, observer } from 'mobx-react/native';
+import Placeholder from 'rn-placeholder';
 import { IVideoStore } from '../../stores/Video';
 import TouchableWithFeedback from '../../components/common/TouchableWithFeedback';
 import styles from '../../styles/home/list';
@@ -22,6 +23,10 @@ export default class List extends Component<IProps> {
     };
   };
 
+  state = {
+    isReady: false,
+  };
+
   componentWillMount() {
     this.fetchVideos();
   }
@@ -32,9 +37,16 @@ export default class List extends Component<IProps> {
     try {
       const respon = await video.getVideos({ c });
       console.log(respon);
+      this.setOnLoad();
     } catch (error) {
       console.log(error);
     }
+  };
+
+  setOnLoad = () => {
+    this.setState({
+      isReady: true,
+    });
   };
 
   openDetail = item => {
@@ -52,25 +64,27 @@ export default class List extends Component<IProps> {
       onPress={() => this.openDetail(item)}
     >
       <View style={styles.imageView}>
-        <ImageBackground
-          style={styles.image}
-          source={{
-            uri:
-              'http://5b0988e595225.cdn.sohucs.com/images/20170813/f13f0109e3634bdeb889a0ba0be375d0.png',
-          }}
-          // source={{
-          //   uri: (item && item.preview_url) || '',
-          // }}
-          resizeMode="cover"
-        >
-          <View style={styles.duration}>
-            <Text style={styles.durationText}>
-              {moment(item.duration * 1000)
-                .utcOffset(0)
-                .format('HH:mm:ss')}
-            </Text>
-          </View>
-        </ImageBackground>
+        <Placeholder.Media size={150} color="#0000ff" onReady={this.state.isReady}>
+          <ImageBackground
+            style={styles.image}
+            source={{
+              uri:
+                'http://5b0988e595225.cdn.sohucs.com/images/20170813/f13f0109e3634bdeb889a0ba0be375d0.png',
+            }}
+            // source={{
+            //   uri: (item && item.preview_url) || '',
+            // }}
+            resizeMode="cover"
+          >
+            <View style={styles.duration}>
+              <Text style={styles.durationText}>
+                {moment(item.duration * 1000)
+                  .utcOffset(0)
+                  .format('HH:mm:ss')}
+              </Text>
+            </View>
+          </ImageBackground>
+        </Placeholder.Media>
       </View>
       <View style={styles.title}>
         <Text style={styles.titleText} numberOfLines={1}>
